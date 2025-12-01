@@ -1,0 +1,109 @@
+:root {
+  /* Brand colors */
+  --green: #3B8C4A;
+  --bluegray: #5D8BAA;
+  --dark-gray: #1F2427;
+  --medium-gray: #3E484F;
+  --off-white: #EAEAEA;
+
+  /* Light mode defaults */
+  --primary: var(--green);
+  --secondary: var(--bluegray);
+  --bg: #f8fafc;
+  --text: #0f172a;
+  --card-bg: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: var(--green);
+    --secondary: var(--bluegray);
+    --bg: var(--dark-gray);
+    --text: var(--off-white);
+    --card-bg: var(--medium-gray);
+    --shadow: rgba(255, 255, 255, 0.05);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+}
+
+header {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  transition: background 0.3s;
+}
+
+header .logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  background: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px var(--shadow);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+h2 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--secondary);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  text-decoration: underline;
+}
